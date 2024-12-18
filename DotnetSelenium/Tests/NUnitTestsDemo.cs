@@ -12,7 +12,9 @@ namespace DotnetSelenium.Tests
     [TestFixture("admin", "password", DriverType.Firefox)]
     public class NUnitTestsDemo
     {
+#pragma warning disable NUnit1032 // An IDisposable field/property should be Disposed in a TearDown method
         private IWebDriver _driver;
+#pragma warning restore NUnit1032 // An IDisposable field/property should be Disposed in a TearDown method
         private readonly string userName;
         private readonly string password;
         private readonly DriverType driverType;
