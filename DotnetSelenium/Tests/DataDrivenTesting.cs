@@ -12,7 +12,9 @@ namespace DotnetSelenium.Tests.Tests
     public class DataDrivenTesting
     {
 
+#pragma warning disable NUnit1032 // An IDisposable field/property should be Disposed in a TearDown method
         private IWebDriver _driver;
+#pragma warning restore NUnit1032 // An IDisposable field/property should be Disposed in a TearDown method
 
         [SetUp]
         public void SetUp()
