@@ -7,7 +7,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 
-namespace DotnetSelenium.Tests.Tests
+namespace DotnetSelenium.Tests
 {
     [TestFixture("admin", "password", DriverType.Firefox)]
     public class NUnitTestsDemo
@@ -55,7 +55,7 @@ namespace DotnetSelenium.Tests.Tests
             _extentReports.AddSystemInfo("OS", "Windows 11");
             _extentReports.AddSystemInfo("Browser", driverType.ToString());
             _extentTest = _extentReports.CreateTest("Login test with POM").Log(Status.Pass, "Extent report initialized");
-            
+
         }
 
         [Test]
@@ -72,7 +72,7 @@ namespace DotnetSelenium.Tests.Tests
             _extentTest.Log(Status.Pass, "Assertion successful");
         }
 
-       
+
         [TearDown]
         public void TearDown()
         {
