@@ -41,9 +41,12 @@ namespace DotnetSelenium.Tests
 
         private IWebDriver GetDriverType(DriverType driverType)
         {
+            ChromeOptions chromeoptions = new ChromeOptions();
+            chromeoptions.AddArgument("--headless=new");
+
             return driverType switch
             {
-                DriverType.Chrome => new ChromeDriver(),
+                DriverType.Chrome => new ChromeDriver(chromeoptions),
                 DriverType.Edge => new EdgeDriver(),
                 DriverType.Firefox => new FirefoxDriver(),
                 _ => _driver
